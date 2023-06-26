@@ -28,7 +28,7 @@ export class App extends Component {
         JSON.stringify(this.state.contacts)
       );
     } else {
-      console.log(1);
+      return;
     }
   }
 
