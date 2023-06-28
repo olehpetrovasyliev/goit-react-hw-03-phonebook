@@ -16,8 +16,7 @@ export class App extends Component {
     filter: '',
   };
   componentDidMount() {
-    const data =
-      JSON.parse(localStorage.getItem('contactsArr')) ?? this.state.contacts;
+    const data = JSON.parse(localStorage.getItem('contactsArr')) ?? [];
     this.setState({ contacts: data });
   }
 
@@ -27,8 +26,6 @@ export class App extends Component {
         'contactsArr',
         JSON.stringify(this.state.contacts)
       );
-    } else {
-      return;
     }
   }
 
